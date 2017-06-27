@@ -16,6 +16,37 @@ var randIndex=Math.floor(Math.random()*bands.length);
 var word= bands[randIndex];
 var guesses= word.length+1;
 
+function showhide() {
+    var img = document.getElementById('beatles');
+    
+        img.style.visibility = "visible";
+}
+
+function showhide2() {
+    var img = document.getElementById('zeppelin');
+    
+        img.style.visibility = "visible";
+}
+
+function showhide3() {
+    var img = document.getElementById('kiss');
+    
+        img.style.visibility = "visible";
+}
+
+function showhide4() {
+    var img = document.getElementById('foreigner');
+    
+        img.style.visibility = "visible";
+}
+
+function showhide5() {
+    var img = document.getElementById('madonna');
+    
+        img.style.visibility = "visible";
+}
+
+
 //Undergoing the word length to pop out the underscores so the player is totally confused what word he or she has to guess
 for(i=0; i<word.length; i++)
 {
@@ -60,7 +91,7 @@ document.onkeyup=function(event)
 
 		//Conditional statements that determine the player's fate
 
-		if(guesses<0)
+		if(guesses<=0&& right!==word)
 			{
 				losses=losses+1;
 			}
@@ -77,30 +108,30 @@ document.onkeyup=function(event)
 
 		document.getElementById("score").innerHTML = ["guesses:"+ guesses , "wins:"+ wins, "losses:"+ losses];
 		
-		//if(right==="zeppelin")
-		//{
-		//	document.getElementById("picture").innerHTML = <img src ="zeppelin.jpg">;
-		//}
+		if(right==="zeppelin")
+		{
+			document.getElementById("picture").innerHTML = showhide2();
+		}
 
-		//if(right==="beatles")
-		//{
-			//document.getElementById("picture").innerHTML = <img src ="beatles.jpg">;
-		//}
+		if(right==="beatles")
+		{
+			document.getElementById("picture").innerHTML = showhide();
+		}
 
-		//if(right==="kiss")
-		//{
-		//	document.getElementById("picture").innerHTML = <img src ="kiss.jpg">;
-		//}
+		if(right==="kiss")
+		{
+		document.getElementById("picture").innerHTML = showhide3();
+		}
 
-		//if(right==="foreigner")
-		//{
-		//	document.getElementById("picture").innerHTML = <img src ="foreigner.jpg">;
-		//}
+		if(right==="foreigner")
+		{
+			document.getElementById("picture").innerHTML = showhide4();
+		}
 
-		//if(right==="madonna")
-		//{
-		//	document.getElementById("picture").innerHTML =<img src ="madonna.jpg">;
-		//}
+		if(right==="madonna")
+		{
+			document.getElementById("picture").innerHTML = showhide5();
+		}
 }
 
 
