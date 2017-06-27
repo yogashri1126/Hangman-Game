@@ -65,7 +65,12 @@ document.onkeyup=function(event)
 				losses=losses+1;
 			}
 
-		if(guesses>=0 && space==word)
+		//Magic tricks to turn my hangman array into a string
+
+		almost= space.toString();
+		right= almost.replace(/,/g, '');
+
+		if(guesses>=0 && right==word)
 			{
 				wins=wins+1;
 			}
