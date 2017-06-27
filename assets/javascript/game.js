@@ -2,7 +2,8 @@
 
 var wins= 0;
 var losses= 0; 
-
+var tries= [];
+var count= 0;
 
 //Defined my arrays when player plays the game
 var bands= ["madonna", "kiss","foreigner", "zeppelin", "beatles"];
@@ -46,10 +47,18 @@ document.onkeyup=function(event)
 		
 	}
 		guesses=guesses-1;
-
-		document.getElementById("dashboard").innerHTML = userguess;
-
 		
+		//Making the array to show the letters that will pop up when guessing
+
+		document.getElementById("dashboard").innerHTML = userguess
+
+		tries[count]=userguess;
+
+		document.getElementById("dashboard").innerHTML = tries.join(" ");
+		
+		count= count+1;
+
+		//Conditional statements that determine the player's fate
 
 		if(guesses<0)
 			{
