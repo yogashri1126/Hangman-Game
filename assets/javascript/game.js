@@ -71,6 +71,8 @@ function reset()
 		}
 
 
+
+
 }
 
 
@@ -121,6 +123,7 @@ document.onkeyup=function(event)
 		if(guesses<=0&& right!==word)
 			{
 				losses=losses+1;
+				reset();
 			}
 
 		//Magic tricks to turn my hangman array into a string
@@ -134,6 +137,7 @@ document.onkeyup=function(event)
 				reset();
 				
 			}
+
 
 		document.getElementById("score").innerHTML = ["guesses:"+ guesses , "wins:"+ wins, "losses:"+ losses];
 		
