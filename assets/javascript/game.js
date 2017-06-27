@@ -77,7 +77,30 @@ document.onkeyup=function(event)
 
 		document.getElementById("score").innerHTML = ["guesses:"+ guesses , "wins:"+ wins, "losses:"+ losses];
 		
+		//if(right==="zeppelin")
+		//{
+		//	document.getElementById("picture").innerHTML = <img src ="zeppelin.jpg">;
+		//}
 
+		//if(right==="beatles")
+		//{
+			//document.getElementById("picture").innerHTML = <img src ="beatles.jpg">;
+		//}
+
+		//if(right==="kiss")
+		//{
+		//	document.getElementById("picture").innerHTML = <img src ="kiss.jpg">;
+		//}
+
+		//if(right==="foreigner")
+		//{
+		//	document.getElementById("picture").innerHTML = <img src ="foreigner.jpg">;
+		//}
+
+		//if(right==="madonna")
+		//{
+		//	document.getElementById("picture").innerHTML =<img src ="madonna.jpg">;
+		//}
 }
 
 
