@@ -20,30 +20,57 @@ function showhide() {
     var img = document.getElementById('beatles');
     
         img.style.visibility = "visible";
+        
 }
 
 function showhide2() {
     var img = document.getElementById('zeppelin');
     
         img.style.visibility = "visible";
+     
 }
 
 function showhide3() {
     var img = document.getElementById('kiss');
     
         img.style.visibility = "visible";
+         
 }
 
 function showhide4() {
     var img = document.getElementById('foreigner');
     
         img.style.visibility = "visible";
+         
 }
 
 function showhide5() {
     var img = document.getElementById('madonna');
     
         img.style.visibility = "visible";
+        
+}
+
+function reset() 
+
+{
+
+		space=[];
+		randIndex=Math.floor(Math.random()*bands.length);
+		word= bands[randIndex];
+		guesses= word.length+1;
+		tries= [];
+		count= 0;
+
+		for(i=0; i<word.length; i++)
+		{
+			space.push("_ ");
+			document.getElementById("h"). innerHTML = space.join(" ");
+			//console.log(space);
+
+		}
+
+
 }
 
 
@@ -104,33 +131,35 @@ document.onkeyup=function(event)
 		if(guesses>=0 && right==word)
 			{
 				wins=wins+1;
+				reset();
+				
 			}
 
 		document.getElementById("score").innerHTML = ["guesses:"+ guesses , "wins:"+ wins, "losses:"+ losses];
 		
 		if(right==="zeppelin")
 		{
-			document.getElementById("picture").innerHTML = showhide2();
+			showhide2();
 		}
 
 		if(right==="beatles")
 		{
-			document.getElementById("picture").innerHTML = showhide();
+			showhide();
 		}
 
 		if(right==="kiss")
 		{
-		document.getElementById("picture").innerHTML = showhide3();
+			 showhide3();
 		}
 
 		if(right==="foreigner")
 		{
-			document.getElementById("picture").innerHTML = showhide4();
+			showhide4();
 		}
 
 		if(right==="madonna")
 		{
-			document.getElementById("picture").innerHTML = showhide5();
+			showhide5();
 		}
 }
 
