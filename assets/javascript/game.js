@@ -24,7 +24,7 @@ for(i=0; i<word.length; i++)
 
 }
 
-document.getElementById("score").innerHTML = [guesses , wins, losses];
+document.getElementById("score").innerHTML = ["guesses:"+ guesses , "wins:"+ wins, "losses:"+ losses];
 
 //document.getElementById("h").innerHTML = "hello world";
 
@@ -32,6 +32,7 @@ document.getElementById("score").innerHTML = [guesses , wins, losses];
 document.onkeyup=function(event)
 {
 	var userguess= event.key;
+
 
 //Undergoing each letter of the array to see if the player guess the letter correctly
 	for(j=0; j<word.length; j++) 
@@ -44,20 +45,26 @@ document.onkeyup=function(event)
 		}
 		
 	}
-		document.getElementById("score").innerHTML = ["guesses:"+ guesses , "wins:"+ wins, "losses:"+ losses];
 		guesses=guesses-1;
+
+		document.getElementById("dashboard").innerHTML = userguess;
+
+		
 
 		if(guesses<0)
 			{
 				losses=losses+1;
 			}
 
+		if(guesses>=0 && space==word)
+			{
+				wins=wins+1;
+			}
+
 		document.getElementById("score").innerHTML = ["guesses:"+ guesses , "wins:"+ wins, "losses:"+ losses];
+		
+
 }
 
-if(guesses>=0 && space==word)
-{
-	wins=wins+1;
-}
 
 
