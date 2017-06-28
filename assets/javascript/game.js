@@ -18,36 +18,77 @@ var guesses= word.length+1;
 
 function showhide() {
     var img = document.getElementById('beatles');
+    var img2= document.getElementById('zeppelin');
+    var img3= document.getElementById('kiss');
+    var img4= document.getElementById('foreigner');
+    var img5= document.getElementById('madonna');
     
-        img.style.visibility = "visible";
+        img.style.display= "block";
+        img2.style.display= "none";
+        img3.style.display= "none";
+        img4.style.display= "none";
+        img5.style.display= "none";
+        
         
 }
 
 function showhide2() {
     var img = document.getElementById('zeppelin');
+    var img2= document.getElementById('beatles');
+    var img3= document.getElementById('kiss');
+    var img4= document.getElementById('foreigner');
+    var img5= document.getElementById('madonna');
     
-        img.style.visibility = "visible";
+        img.style.display = "block";
+        img2.style.display= "none";
+        img3.style.display= "none";
+        img4.style.display= "none";
+        img5.style.display= "none";
      
 }
 
 function showhide3() {
     var img = document.getElementById('kiss');
+    var img2= document.getElementById('beatles');
+    var img3= document.getElementById('zeppelin');
+    var img4= document.getElementById('foreigner');
+    var img5= document.getElementById('madonna');
     
-        img.style.visibility = "visible";
+        img.style.display = "block";
+        img2.style.display= "none";
+        img3.style.display= "none";
+        img4.style.display= "none";
+        img5.style.display= "none";
          
 }
 
 function showhide4() {
     var img = document.getElementById('foreigner');
+    var img2= document.getElementById('beatles');
+    var img3= document.getElementById('zeppelin');
+    var img4= document.getElementById('kiss');
+    var img5= document.getElementById('madonna');
     
-        img.style.visibility = "visible";
+        img.style.display = "block";
+        img2.style.display= "none";
+        img3.style.display= "none";
+        img4.style.display= "none";
+        img5.style.display= "none";
          
 }
 
 function showhide5() {
     var img = document.getElementById('madonna');
+    var img2= document.getElementById('beatles');
+    var img3= document.getElementById('zeppelin');
+    var img4= document.getElementById('kiss');
+    var img5= document.getElementById('foreigner');
     
-        img.style.visibility = "visible";
+        img.style.display = "block";
+        img2.style.display= "none";
+        img3.style.display= "none";
+        img4.style.display= "none";
+        img5.style.display= "none";
         
 }
 
@@ -120,6 +161,11 @@ document.onkeyup=function(event)
 
 		//Conditional statements that determine the player's fate
 
+		if(losses===8)
+		{
+			document.getElementById("#picture")= "YOU JUST LOST THE GAME";
+		}
+
 		if(guesses<=0&& right!==word)
 			{
 				losses=losses+1;
@@ -138,12 +184,15 @@ document.onkeyup=function(event)
 				
 			}
 
+		
+
 
 		document.getElementById("score").innerHTML = ["guesses:"+ guesses , "wins:"+ wins, "losses:"+ losses];
 		
 		if(right==="zeppelin")
 		{
 			showhide2();
+
 		}
 
 		if(right==="beatles")
