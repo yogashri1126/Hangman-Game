@@ -16,6 +16,7 @@ var randIndex=Math.floor(Math.random()*bands.length);
 var word= bands[randIndex];
 var guesses= word.length+1;
 
+//Created various functions with combinations to display and hide pictures when the user gets the word correctly (1-5)
 function showhide() {
     var img = document.getElementById('beatles');
     var img2= document.getElementById('zeppelin');
@@ -91,6 +92,8 @@ function showhide5() {
         img5.style.display= "none";
         
 }
+
+//For everytime the player wins or loses, a reset function is used for the next run
 
 function reset() 
 
@@ -191,6 +194,8 @@ document.onkeyup=function(event)
 
 		document.getElementById("score").innerHTML = ["guesses:"+ guesses , "wins:"+ wins, "losses:"+ losses];
 		
+		//This calls for the images to show up, I also prompt the user to scroll down to see the image
+
 		if(right==="zeppelin")
 		{
 			showhide2();

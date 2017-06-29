@@ -8,37 +8,44 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+<!--Linking CSS Here and google fonts afterwards-->
 <link rel="stylesheet" href="assets/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
 
 <body>
-
+<!--You lost the game!-->
 <div class= "col-md-11">
 	<div id="picture"></div>
 </div>
+
+<!--Container class where all the magic happens-->
 <div class= "container">
-<h1>HANGMAN</h1>
-<h2>80&#8217s Style</h2>
+	<h1>HANGMAN</h1>
+	<h2>80&#8217s Style</h2>
 
-<div class= "col-md-6">
-	<h4>Your Word Is ...</h4>
-		<div id="h"></div>
-</div>
+<!--Word to guess-->
 
+	<div class= "col-md-6">
+		<h4>Your Word Is ...</h4>
+			<div id="h"></div>
+	</div>
 
-<div class= "col-md-6">
-	<h4>Gnarly Stats</h4>
-		<div id="score"></div>
-</div>
+<!--The scoreboard-->
 
-<div class= "col-md-12">
-	<h4>Your Guesses</h4>
-		<div id="dashboard"></div>
-</div>
+	<div class= "col-md-6">
+		<h4>Gnarly Stats</h4>
+			<div id="score"></div>
+	</div>
+
+<!--User could track guesses-->
+	<div class= "col-md-12">
+		<h4>Your Guesses</h4>
+			<div id="dashboard"></div>
+	</div>
 	
-
-<div class= "col-md-11">
+<!--Where all the hidden pictures lie!-->
+	<div class= "col-md-11">
 
 		<img id="beatles" src="assets/images/beatles.jpg" style="display: none;" height=50% width=50% />
 		<img id= "zeppelin" src="assets/images/zeppelin.jpg" style="display: none;" height=50% width=50% />
@@ -46,10 +53,12 @@
 
 		<img id="foreigner" src="assets/images/foreigner.jpg" style="display: none;" height=50% width=50% />
 		<img id="madonna" src="assets/images/madonna.jpg" style="display: none;" height=50% width=50%/>
-</div>
+	</div>
 </div>
 	
 </body>
+
+<!--Linking JS here-->
 
 <script type="text/javascript" src="assets/javascript/game.js"></script>
 
