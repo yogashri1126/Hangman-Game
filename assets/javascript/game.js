@@ -161,14 +161,15 @@ document.onkeyup=function(event)
 
 		//Conditional statements that determine the player's fate
 
-		if(losses===8)
-		{
-			document.getElementById("#picture")= "YOU JUST LOST THE GAME";
-		}
+		
 
 		if(guesses<=0&& right!==word)
 			{
 				losses=losses+1;
+				if(losses===8)
+				{
+					document.getElementById("picture").innerHTML = "<h3>YOU JUST LOST THE GAME!</h3>"
+				}
 				reset();
 			}
 
