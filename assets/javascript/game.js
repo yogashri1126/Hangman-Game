@@ -103,6 +103,8 @@ function reset()
 		tries= [];
 		count= 0;
 
+		document.getElementById("dashboard").innerHTML = tries;
+
 		for(i=0; i<word.length; i++)
 		{
 			space.push("_ ");
@@ -159,9 +161,8 @@ document.onkeyup=function(event)
 		
 		count= count+1;
 
-		//Conditional statements that determine the player's fate
-
-		
+		//Conditional statements that determine the player's fate. If you lose 8 times, Kendrick Lamar will play!
+	
 
 		if(guesses<=0&& right!==word)
 			{
@@ -169,6 +170,8 @@ document.onkeyup=function(event)
 				if(losses===8)
 				{
 					document.getElementById("picture").innerHTML = "<h3>YOU JUST LOST THE GAME!</h3>"
+					var snd = new Audio('assets/javascript/Music/humble.mp3');
+        			snd.play();
 				}
 				reset();
 			}
@@ -185,35 +188,38 @@ document.onkeyup=function(event)
 				
 			}
 
-		
-
 
 		document.getElementById("score").innerHTML = ["guesses:"+ guesses , "wins:"+ wins, "losses:"+ losses];
 		
 		if(right==="zeppelin")
 		{
 			showhide2();
+			alert("Scroll down!")
 
 		}
 
 		if(right==="beatles")
 		{
 			showhide();
+			alert("Scroll down!")
 		}
 
 		if(right==="kiss")
 		{
 			 showhide3();
+			 alert("Scroll down!")
 		}
 
 		if(right==="foreigner")
 		{
 			showhide4();
+			alert("Scroll down!")
 		}
 
 		if(right==="madonna")
 		{
 			showhide5();
+			alert("Scroll down!")
 		}
 }
 
